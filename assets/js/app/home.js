@@ -1,8 +1,14 @@
 "use strict";
 
+import Preloader from "../components/preloader";
 import $ from "jquery";
+import Menu from "../components/menu";
+import Prism from "../components/prism";
+
+new Preloader();
 
 $(function(){
 
-	console.log("dom is ready");
+	new Menu();
+	new Prism();
 });
