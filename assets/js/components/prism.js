@@ -43,9 +43,9 @@ export default class Prism{
 			this.state = 0;
 		}
 	}
-	rotatePrism(){
+	rotatePrism(){		
 		this.isRotating = true;
-		this.el.css({transform: "translateZ("+ this.prismBuilder.deep.y * -1 +"px) rotateX("+ this.current * 90 +"deg)"});
+		this.el.css({transform: "translateZ("+ this.prismBuilder.deep.y * -1 +"px) rotateX("+ this.current * 90 +"deg)"});		
 		this.prismBuilder.getSideByIndex(this.state).addClass("active").siblings().removeClass("active");
 	}
 	changeState(){

@@ -12,12 +12,23 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  shim: {
+    "assets/js/plugin/slider": {
+      "deps": [
+        "jquery"
+      ],
+      "exports": "slider"
+    }
+  },
 
   map: {
+    "assets/js/plugin/slider": "slider",
     "babel": "npm:babel-core@5.8.33",
     "babel-runtime": "npm:babel-runtime@5.8.29",
     "core-js": "npm:core-js@1.2.6",
     "jquery": "github:components/jquery@2.1.4",
+    "jquery-mask-plugin": "npm:jquery-mask-plugin@1.13.4",
+    "jquery-validation": "github:jzaefferer/jquery-validation@1.14.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -29,6 +40,9 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "github:jzaefferer/jquery-validation@1.14.0": {
+      "jquery": "github:components/jquery@2.1.4"
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
