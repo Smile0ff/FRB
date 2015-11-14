@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>First Realty Brokerage</title>
+	<meta charset="UTF-8">
+	<!--meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"
+	<meta http-equiv="cleartype" content="on">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="Description" content="Описание необходимых мета-тегов." />
+	<!--meta name="msapplication-TileImage" content="assets/images/favicons/ms/144x144.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/57x57.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/60x60.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/72x72.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/76x76.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/76x76.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/114x114.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/120x120.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/144x144.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/152x152.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/180x180.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/16x16.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/32x32.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/96x96.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/160x160.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/192x192.png"-->
+	<link rel="stylesheet" href="build/css/expats.bundle.min.css">
+</head>
+<body>
+	<div id="page">
+		<header id="header" class="common">
+			<div class="logo">
+				<a href="index.html"><img src="build/images/logo.png" alt="First Realty Brokerage"></a>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html">Головна</a></li>
+					<li><a href="services.html">Послуги</a></li>
+					<li><a href="people.html">Люди</a></li>
+					<li><a href="vacancies.html">Вакансії</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="research.html">Дослідження</a></li>
+					<li class="active"><a href="expats.html">Інформація для экспатів</a></li>
+					<li><a href="#">Контакти</a></li>
+				</ul>
+			</nav>
+			<div class="contact-info">	
+				<a href="tel:+380449999999"><span class="icon-phone"></span>+38 (044) 999-99-99</a>
+				<a href="#"><span class="icon-location"></span>знайти нас на мапі</a>
+			</div>
+			<div class="lang">
+				<a href="#">UA</a>
+			</div>
+		</header>
+		<main id="content" class="sticky">
+			<h1>Інформація для експатів</h1>
+			<section class="outer substrate location-categories-holder">
+				<div class="inner">
+					<form action="php/location.php" method="POST" id="location-form">
+						<div class="item">
+							<input type="checkbox" name="location[hospital]" value="yes" id="location-hospital">
+							<label for="location-hospital">
+								<div class="inside">
+									<span class="icon icon-location-hospital"></span>
+									<p>Лікарні</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[school]" value="yes" id="location-school">
+							<label for="location-school">
+								<div class="inside">
+									<span class="icon icon-location-university"></span>
+									<p>Школа</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[entertainment]" value="yes" id="location-entertainment">
+							<label for="location-entertainment">
+								<div class="inside">
+									<span class="icon icon-location-zoo"></span>
+									<p>Розваги</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[tube]" value="yes" id="location-tube">
+							<label for="location-tube">
+								<div class="inside">
+									<span class="icon icon-location-tube"></span>
+									<p>Метро</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[shop]" value="yes" id="location-shop">
+							<label for="location-shop">
+								<div class="inside">
+									<span class="icon icon-location-shop"></span>
+									<p>Магазини</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[gym]" value="yes" id="location-gym">
+							<label for="location-gym">
+								<div class="inside">
+									<span class="icon icon-location-gym"></span>
+									<p>Спортзали</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[rent]" value="yes" id="location-rent">
+							<label for="location-rent">
+								<div class="inside">
+									<span class="icon icon-location-rent"></span>
+									<p>Оренда авто</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[pressa]" value="yes" id="location-pressa">
+							<label for="location-pressa">
+								<div class="inside">
+									<span class="icon icon-location-pressa"></span>
+									<p>преса</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[taxi]" value="yes" id="location-taxi">
+							<label for="location-taxi">
+								<div class="inside">
+									<span class="icon icon-location-taxi"></span>
+									<p>Таксі</p>
+								</div>
+							</label>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="location[community]" value="yes" id="location-community">
+							<label for="location-community">
+								<div class="inside">
+									<span class="icon icon-location-community"></span>
+									<p>Спільноти</p>
+								</div>
+							</label>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- add class active to display button -->
+			<div class="btn-extra-large flat white" id="map-button">
+				<a href="#"><span class="icon icon-map"></span>Дивитися на мапі</a>
+			</div>
+			<!-- add class active to switch views -->
+			<div class="outer substrate" id="expats-holder">
+				<div class="inner white-back">
+					<section class="expats-intro-holder">
+						<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum eveniet, repellat doloribus non iusto ipsum voluptatum ut odit inventore temporibus dolores expedita, quidem quo, velit quam quos ipsam molestiae quibusdam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt nostrum placeat est dolores ab ea provident quibusdam eaque odio. Natus recusandae laudantium nobis earum pariatur dolore ullam optio qui.</p>
+						<ul class="list-holder icon-list">
+							<li>
+								<span class="icon icon-building"></span>
+								<p>Дізнайтеся що знаходится у місті та за його межами</p>
+							</li>
+							<li>
+								<span class="icon icon-information"></span>
+								<p>Отримайте детальну інформацію о місцях які вас цікавлять</p>
+							</li>
+							<li>
+								<span class="icon icon-map"></span>
+								<p>Подивітся місцезнаходження об'єктів на мапі</p>
+							</li>
+						</ul>
+					</section>
+					<section class="expats-location-info">
+						<div class="category-holder">
+							<h2><span class="icon icon-location-hospital"></span>Лікарні</h2>
+							<article class="item">
+								<div class="entitled">
+									<h3>Клиника Medicom</h3>
+									<figure><img src="build/images/company-logo/medikom.jpg" alt=""></figure>
+								</div>
+								<div class="phones-holder">
+									<span class="icon icon-phone"></span>
+									<span class="text">Телефони: </span>
+									<a href="tel:+380999999999">+38(099) 999-99-99</a>
+									<a href="tel:+380999999999">+38(099) 999-99-99</a>
+								</div>
+								<div class="address-holder">
+									<span class="icon icon-location"></span>
+									<span class="text">Адреса: </span>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae rerum magnam nisi ipsa.</p>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt iure laborum at officiis reiciendis quam temporibus ratione dolor eos repellendus et, distinctio, quasi corporis numquam eius quibusdam doloremque ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sunt sit eaque magni inventore est error dolorum vel ipsa facere facilis, consequuntur alias ad sint, nobis excepturi laudantium labore asperiores.</p>
+							</article>
+							<article class="item">
+								<div class="entitled">
+									<h3>Клиника Medicom</h3>
+									<figure><img src="build/images/company-logo/medikom.jpg" alt=""></figure>
+								</div>
+								<div class="phones-holder">
+									<span class="icon icon-phone"></span>
+									<span class="text">Телефони: </span>
+									<a href="tel:+380999999999">+38(099) 999-99-99</a>
+									<a href="tel:+380999999999">+38(099) 999-99-99</a>
+								</div>
+								<div class="address-holder">
+									<span class="icon icon-location"></span>
+									<span class="text">Адреса: </span>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae rerum magnam nisi ipsa.</p>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt iure laborum at officiis reiciendis quam temporibus ratione dolor eos repellendus et, distinctio, quasi corporis numquam eius quibusdam doloremque ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sunt sit eaque magni inventore est error dolorum vel ipsa facere facilis, consequuntur alias ad sint, nobis excepturi laudantium labore asperiores.</p>
+							</article>
+							<article class="item">
+								<div class="entitled">
+									<h3>Клиника Medicom</h3>
+									<figure><img src="build/images/company-logo/medikom.jpg" alt=""></figure>
+								</div>
+								<div class="phones-holder">
+									<span class="icon icon-phone"></span>
+									<span class="text">Телефони: </span>
+									<a href="tel:+380999999999">+38(099) 999-99-99</a>
+									<a href="tel:+380999999999">+38(099) 999-99-99</a>
+								</div>
+								<div class="address-holder">
+									<span class="icon icon-location"></span>
+									<span class="text">Адреса: </span>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae rerum magnam nisi ipsa.</p>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt iure laborum at officiis reiciendis quam temporibus ratione dolor eos repellendus et, distinctio, quasi corporis numquam eius quibusdam doloremque ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sunt sit eaque magni inventore est error dolorum vel ipsa facere facilis, consequuntur alias ad sint, nobis excepturi laudantium labore asperiores.</p>
+							</article>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+	</div>
+	<div id="footer">
+		<div class="cheers-logo">
+			<a href="#"><img src="build/images/cheers.png" alt="CHEERS! Unlimited web-studio"></a>
+		</div>
+		<small>©2015. All rights Reserved. Design and created by CHEERS! Unlimited web-agency.</small>
+	</div>
+	<script src="jspm_packages/system.js"></script>
+	<script src="jspm.config.js"></script>
+	<script>
+		System.import("assets/js/app/expats");
+	</script>
+</body>
+</html>
