@@ -5,7 +5,7 @@ export default class Preloader{
 	constructor(){
 		this.el = document.getElementById("preloader-holder");
 		this.frbCube = document.getElementById("frb-cube-holder");
-		this.loadTime = 4500;
+		this.loadTime = 3750;
 		this.UIevents();
 
 	}

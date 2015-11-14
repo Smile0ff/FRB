@@ -18,14 +18,22 @@ System.config({
         "jquery"
       ],
       "exports": "slider"
+    },
+    "assets/js/plugin/tabs": {
+      "deps": [
+        "jquery"
+      ],
+      "exports": "tabs"
     }
   },
 
   map: {
     "assets/js/plugin/slider": "slider",
+    "assets/js/plugin/tabs": "tabs",
     "babel": "npm:babel-core@5.8.33",
     "babel-runtime": "npm:babel-runtime@5.8.29",
     "core-js": "npm:core-js@1.2.6",
+    "handlebars": "github:components/handlebars.js@4.0.4",
     "jquery": "github:components/jquery@2.1.4",
     "jquery-mask-plugin": "npm:jquery-mask-plugin@1.13.4",
     "jquery-validation": "github:jzaefferer/jquery-validation@1.14.0",

@@ -43,55 +43,55 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="index.html">Главная</a></li>
-					<li class="active"><a href="services.html">Услуги</a></li>
-					<li><a href="#">Люди</a></li>
-					<li><a href="#">Вакансии</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Исследования</a></li>
-					<li><a href="#">Информация для экспатов</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="index.html">Головна</a></li>
+					<li class="active"><a href="services.html">Послуги</a></li>
+					<li><a href="people.html">Люди</a></li>
+					<li><a href="vacancies.html">Вакансії</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="#">Дослідження</a></li>
+					<li><a href="#">Інформація для экспатів</a></li>
+					<li><a href="#">Контакти</a></li>
 				</ul>
 			</nav>
 			<div class="contact-info">	
 				<a href="tel:+380449999999"><span class="icon-phone"></span>+38 (044) 999-99-99</a>
-				<a href="#"><span class="icon-location"></span>найти нас на карте</a>
+				<a href="#"><span class="icon-location"></span>знайти нас на мапі</a>
 			</div>
 			<div class="lang">
-				<a href="#">RU</a>
+				<a href="#">UA</a>
 			</div>
 		</header>
 		<main id="content" class="sticky">
-			<h1>Наши услуги</h1>
+			<h1>Наші послуги</h1>
 			<section class="outer substrate">
 				<div class="inner">
-					<div class="btn-long">
-						<a href="#">Коммерческая недвижимость</a>
+					<div class="btn-long flat white">
+						<a href="services-commercial.html">Коммерційна нерухомість</a>
 					</div>
-					<div class="btn-long">
-						<a href="#">Жилая недвижимость</a>
+					<div class="btn-long flat white">
+						<a href="services-private.html">Житлова нерухомість</a>
 					</div>
-					<div class="btn-long">
-						<a href="#">Оценка недвижимости</a>
+					<div class="btn-long flat white">
+						<a href="services-evaluation.html">Оцінка майна</a>
 					</div>
-					<div class="btn-long">
-						<a href="#">Управление недвижимостью</a>
+					<div class="btn-long flat white">
+						<a href="services-management.html">Управління нерухомістю</a>
 					</div>
 				</div>
 			</section>
 			<section class="outer extra-buttons-holder">
 				<div class="btn-long">
-					<a href="#">Релокация экспатов</a>
+					<a href="#">Релокація экспатів</a>
 				</div>
 				<div class="btn-long">
-					<a href="#">Информация для экспатов</a>
+					<a href="#">Інформація для экспатів</a>
 				</div>
 			</section>
 			<div class="outer substrate">
 				<div class="inner white-back">
 					<section class="principles-holder">
-						<h2>Наши принципы работы</h2>
-						<ul>
+						<h2>Основні принципи роботи</h2>
+						<ul class="list-holder icon-list">
 							<li>
 								<span class="icon icon-connected"></span>
 								<p>Виконання всіх функцій через одного провайдера</p>
@@ -119,8 +119,8 @@
 						</ul>
 					</section>
 					<section class="clients-holder">
-						<h2>Наши клиенты</h2>
-						<ul>
+						<h2>Наші кліенти</h2>
+						<ul class="list-holder icon-list">
 							<li>
 								<figure>
 									<img src="build/images/clients-logo/botschaft.jpg" alt="Botschaft">
@@ -169,8 +169,8 @@
 						</ul>
 					</section>
 					<section class="client-comments-holder">
-						<h2>Отзывы наших клиентов</h2>
-						<ul>
+						<h2>Відгуки наших кліентів</h2>
+						<ul class="list-holder icon-list full">
 							<li>
 								<figure>
 									<img src="build/images/clients-logo/volia.jpg" alt="Volia">
@@ -198,7 +198,7 @@
 						</ul>
 					</section>
 					<div class="btn-extra-large flat" id="comment-button">
-						<a href="#">Оставить отзыв</a>
+						<a href="#">Залишити відгук</a>
 					</div>
 				</div>
 			</div>
@@ -206,25 +206,25 @@
 				<div class="pop-up">
 					<div class="outer">
 						<div class="inner">
-							<h2>Напишите ваш отзыв</h2>
-							<p>Мы ценим ваше время и благодарим за отзыв</p>
+							<h2>Залиште ваш відгук</h2>
+							<p>Ми цінуемо ваш час та вдячні за ваш відгук</p>
 							<span class="sprtr-h"></span>
 							<form action="php/comment.php" method="POST" id="comment-form">
 								<div class="response-holder"></div>
 								<div class="field-holder">
-									<label for="comment-company-name">Название компании</label>
-									<input type="text" name="comment[company_name]" value="" placeholder="Введите название вашей компании" id="comment-company-name" data-rule-required="true" data-msg-required="Вы не ввели название компании">
+									<label for="comment-company-name">Назва компанії</label>
+									<input type="text" name="comment[company_name]" value="" placeholder="Введіть назву вашої компаніїї" id="comment-company-name" data-rule-required="true" data-msg-required="Це поле має бути заповненним">
 								</div>
 								<div class="field-holder">
-									<label for="comment-email">Электронный адрес</label>
-									<input type="email" name="comment[email]" value="" placeholder="Введите электронный адрес" id="comment-email" data-rule-required="true" data-msg-required="Вы не ввели электронный адрес" data-rule-email="true" data-msg-email="Вы ввели некоректный электронный адрес">
+									<label for="comment-email">Електронна пошта</label>
+									<input type="email" name="comment[email]" value="" placeholder="Введіть електронну пошту" id="comment-email" data-rule-required="true" data-msg-required="Це поле має бути заповненним" data-rule-email="true" data-msg-email="Це не схоже на справжню адресу електронної пошти">
 								</div>
 								<div class="field-holder">
-									<label for="comment-message">Ваш отзыв</label>
-									<textarea name="comment[message]" value="" placeholder="Введите ваш отзыв" id="comment-message" data-rule-required="true" data-msg-required="Вы ничего не написали"></textarea>
+									<label for="comment-message">Ваш відгук</label>
+									<textarea name="comment[message]" value="" placeholder="Введіть ваш відгук" id="comment-message" data-rule-required="true" data-msg-required="Це поле має бути заповненним"></textarea>
 								</div>
 								<button type="submit">
-									<span>Отправить</span>
+									<span>Надіслати</span>
 								</button>
 							</form>
 						</div>

@@ -258,7 +258,7 @@ a{ text-decoration: none; }
 	position: fixed;
 	top: 0;
 	right: 0;
-	z-index: 15;
+	z-index: 20;
 	transition: all .5s @easing;
 	transform: translateX(100%);
 	background: fade(@lightGrey, 90%);
@@ -325,12 +325,14 @@ a{ text-decoration: none; }
 /*	content start							  */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #content{
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 	& > h1{
 		margin-top: 80px;
 		text-align: center;
 		text-transform: uppercase;
 	}
+}
+.outer{
 	h2{
 		margin: 40px 0;
 		text-transform: uppercase;
@@ -481,6 +483,34 @@ a{ text-decoration: none; }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	to up start								  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#to-up{
+	width: 60px;
+	height: 60px;
+	margin: 40px auto;
+	background: @lightGrey;
+	overflow: hidden;
+	& > span{
+		display: block;
+		width: 100%;
+		height: 100%;
+		transition: all .5s @easing;
+		line-height: 60px;
+		&:before{
+			display: inline-block;
+			line-height: inherit;
+		}
+		&:hover{
+			color: @red;
+		}
+	}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	to up end								  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	buttons start							  */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 *[class^="btn-"]{
@@ -517,6 +547,36 @@ a{ text-decoration: none; }
 			}
 		}
 	}
+	&.flat{
+		a{
+			box-shadow: none;
+			&:after{ display: none; }
+		}
+	}
+	&.white{
+		background: @white;
+		a{
+			background: transparent;
+			color: @black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			backface-visibility: hidden;
+			&:after{ display: none; }
+		}
+		&:after{
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: @red;
+			content: "";
+			transition: all .5s @easing;
+			overflow: hidden;
+		}
+	}
 }
 .btn-large{
 	width: 180px;
@@ -525,10 +585,14 @@ a{ text-decoration: none; }
 		font-size: 1em;
 		line-height: 50px;
 	}
-	&.flat{
-		a{
-			box-shadow: none;
-			&:after{ display: none; }
+	&.white{
+		&:after{
+			height: 50px;
+			transform: translateY(48px);
+		}
+		&:hover{
+			a{ color: @white; }
+			&:after{ transform: translateY(0); }
 		}
 	}
 }
@@ -540,19 +604,24 @@ a{ text-decoration: none; }
 		line-height: 60px;
 		color: @white;
 	}
-	&.flat{
-		a{
-			box-shadow: none;
-			&:after{ display: none; }
-		}
-	}
 }
 .btn-small{
 	width: 160px;
 	height: 40px;
+	overflow: hidden;
 	a{
 		font-size: 0.875em;
 		line-height: 40px;
+	}
+	&.white{
+		&:after{
+			height: 40px;
+			transform: translateY(38px);
+		}
+		&:hover{
+			a{ color: @white; }
+			&:after{ transform: translateY(0); }
+		}
 	}
 }
 .btn-long{
@@ -560,11 +629,21 @@ a{ text-decoration: none; }
 	height: 50px;
 	a{
 		line-height: 50px;
-		font-size: 1em;
+		font-size: .875em;
 		box-shadow: none;
 		background: @white;
-		text-transform: lowercase;
 		&:after{ display: none; }
+	}
+	&.white{
+		&:after{
+			height: 50px;
+			transform: translateY(48px);
+		}
+		&:hover,
+		&.active{
+			a{ color: @white; }
+			&:after{ transform: translateY(0); }
+		}
 	}
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
