@@ -124,13 +124,17 @@ a{ text-decoration: none; }
 		}
 	}
 	&.common{
-		height: 120px;
+		height: 100px;
 		background: @white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 20;
 		overflow: hidden;
 		.logo{
-			width: 160px;
-			height: 64px;
-			margin: 28px 40px 0 40px;
+			width: 140px;
+			height: 56px;
+			margin: 24px 40px 0 40px;
 			overflow: hidden;
 			img{
 				width: 100%;
@@ -156,14 +160,14 @@ a{ text-decoration: none; }
 				a{
 					display: inline-block;
 					font-size: 1em;
-					line-height: 120px;
+					line-height: 100px;
 					position: relative;
 					transition: all .5s @easing;
 					text-transform: uppercase;
 					&:before{
 						display: block;
 						width: 100%;
-						height: 40px;
+						height: 30px;
 						position: absolute;
 						left: 0;
 						bottom: 0;
@@ -185,7 +189,7 @@ a{ text-decoration: none; }
 		}
 		.contact-info{
 			width: 200px;
-			height: 80px;
+			height: 60px;
 			float: left;
 			margin: 20px 0 0 20px;
 			background: transparent;
@@ -194,7 +198,8 @@ a{ text-decoration: none; }
 			a{
 				font-size: 1em;
 				color: @black;
-				margin-top: 10px;
+				margin-top: 6px;
+				line-height: 20px;
 				padding-right: 20px;
 				box-sizing: border-box;
 				text-transform: lowercase;
@@ -207,7 +212,7 @@ a{ text-decoration: none; }
 			width: 80px;
 			height: 80px;
 			float: left;
-			margin-top: 20px;
+			margin-top: 10px;
 			background: transparent;
 			a{
 				display: block;
@@ -327,7 +332,8 @@ a{ text-decoration: none; }
 #content{
 	margin-bottom: 40px;
 	& > h1{
-		margin-top: 80px;
+		padding-top: 150px;
+		font-size: 3em;
 		text-align: center;
 		text-transform: uppercase;
 	}

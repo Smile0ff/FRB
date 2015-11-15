@@ -43,14 +43,13 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="index.html">Головна</a></li>
 					<li><a href="services.html">Послуги</a></li>
 					<li><a href="people.html">Люди</a></li>
 					<li><a href="vacancies.html">Вакансії</a></li>
 					<li><a href="news.html">Новини</a></li>
 					<li><a href="research.html">Дослідження</a></li>
 					<li class="active"><a href="expats.html">Інформація для экспатів</a></li>
-					<li><a href="#">Контакти</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
 				</ul>
 			</nav>
 			<div class="contact-info">	
@@ -163,6 +162,10 @@
 			<div class="btn-extra-large flat white" id="map-button">
 				<a href="#"><span class="icon icon-map"></span>Дивитися на мапі</a>
 			</div>
+			<div id="map-holder">
+				<span class="icon icon-close close"></span>
+				<div id="map"></div>
+			</div>
 			<!-- add class active to switch views -->
 			<div class="outer substrate" id="expats-holder">
 				<div class="inner white-back">
@@ -184,68 +187,15 @@
 							</li>
 						</ul>
 					</section>
-					<section class="expats-location-info">
-						<div class="category-holder">
-							<h2><span class="icon icon-location-hospital"></span>Лікарні</h2>
-							<article class="item">
-								<div class="entitled">
-									<h3>Клиника Medicom</h3>
-									<figure><img src="build/images/company-logo/medikom.jpg" alt=""></figure>
-								</div>
-								<div class="phones-holder">
-									<span class="icon icon-phone"></span>
-									<span class="text">Телефони: </span>
-									<a href="tel:+380999999999">+38(099) 999-99-99</a>
-									<a href="tel:+380999999999">+38(099) 999-99-99</a>
-								</div>
-								<div class="address-holder">
-									<span class="icon icon-location"></span>
-									<span class="text">Адреса: </span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae rerum magnam nisi ipsa.</p>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt iure laborum at officiis reiciendis quam temporibus ratione dolor eos repellendus et, distinctio, quasi corporis numquam eius quibusdam doloremque ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sunt sit eaque magni inventore est error dolorum vel ipsa facere facilis, consequuntur alias ad sint, nobis excepturi laudantium labore asperiores.</p>
-							</article>
-							<article class="item">
-								<div class="entitled">
-									<h3>Клиника Medicom</h3>
-									<figure><img src="build/images/company-logo/medikom.jpg" alt=""></figure>
-								</div>
-								<div class="phones-holder">
-									<span class="icon icon-phone"></span>
-									<span class="text">Телефони: </span>
-									<a href="tel:+380999999999">+38(099) 999-99-99</a>
-									<a href="tel:+380999999999">+38(099) 999-99-99</a>
-								</div>
-								<div class="address-holder">
-									<span class="icon icon-location"></span>
-									<span class="text">Адреса: </span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae rerum magnam nisi ipsa.</p>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt iure laborum at officiis reiciendis quam temporibus ratione dolor eos repellendus et, distinctio, quasi corporis numquam eius quibusdam doloremque ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sunt sit eaque magni inventore est error dolorum vel ipsa facere facilis, consequuntur alias ad sint, nobis excepturi laudantium labore asperiores.</p>
-							</article>
-							<article class="item">
-								<div class="entitled">
-									<h3>Клиника Medicom</h3>
-									<figure><img src="build/images/company-logo/medikom.jpg" alt=""></figure>
-								</div>
-								<div class="phones-holder">
-									<span class="icon icon-phone"></span>
-									<span class="text">Телефони: </span>
-									<a href="tel:+380999999999">+38(099) 999-99-99</a>
-									<a href="tel:+380999999999">+38(099) 999-99-99</a>
-								</div>
-								<div class="address-holder">
-									<span class="icon icon-location"></span>
-									<span class="text">Адреса: </span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae rerum magnam nisi ipsa.</p>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt iure laborum at officiis reiciendis quam temporibus ratione dolor eos repellendus et, distinctio, quasi corporis numquam eius quibusdam doloremque ex.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sunt sit eaque magni inventore est error dolorum vel ipsa facere facilis, consequuntur alias ad sint, nobis excepturi laudantium labore asperiores.</p>
-							</article>
-						</div>
-					</section>
+					<section class="expats-location-info"></section>
 				</div>
 			</div>
 		</main>
+		<div id="loader-holder">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 	</div>
 	<div id="footer">
 		<div class="cheers-logo">
