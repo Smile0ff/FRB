@@ -24,7 +24,9 @@ form{
 	}
 }
 
-.field-holder{
+.field-holder,
+.check-holder,
+.range-holder{
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -34,6 +36,7 @@ form{
 		margin-bottom: 0;
 	}
 }
+.check-holder{ position: static; }
 
 ::-webkit-input-placeholder{
 	font-family: "PT Sans", sans-serif;
@@ -102,6 +105,55 @@ input[type="password"]{
 	}
 }
 
+input[type="checkbox"],
+input[type="radio"]{
+	display: none;
+	& + label{
+		display: block;
+		width: 100%;
+		height: 40px;
+		position: relative;
+		padding: 0;
+		background: @white;
+		overflow: hidden;
+		&:before,
+		& > span{
+			display: block;
+			width: 100%;
+			height: 40px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			transition: all .5s @easing;
+			backface-visibility: hidden;
+			overflow: hidden;
+		}
+		&:before{
+			content: "";
+			top: -2px;
+			transform: translateY(100%);
+			background: @red;
+		}
+		& > span{
+			text-align: center;
+			line-height: 40px;
+			z-index: 5;
+			color: @black;
+			background: transparent;
+		}
+	}
+	& + label:hover,
+	&:checked + label{
+		&:before{
+			top: 0;
+			transform: translateY(0);
+		}
+		& > span{ color: @white; }
+	}
+}
+
+
 textarea{
 	width: 100%;
 	height: 125px;
@@ -152,4 +204,39 @@ button[type="submit"]{
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	forms end								  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	range slider start						  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.range-holder{
+	width: 100%;
+	height: 8px;
+	position: relative;
+	background: @lightGrey;
+	overflow: visible;
+	.ui-slider-range{
+		width: 100%;
+		height: 100%;
+		background: @red;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.ui-slider-handle{
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: -4px;
+		left: 0;
+		border: 1px solid @black;
+		background: @white;
+		box-sizing: border-box;
+		outline: none;
+		transform: translateX(-8px);
+		overflow: hidden;
+	}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*	range slider end						  */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

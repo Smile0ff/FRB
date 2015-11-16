@@ -37,7 +37,11 @@ System.config({
     "handlebars": "github:components/handlebars.js@4.0.4",
     "jquery": "github:components/jquery@2.1.4",
     "jquery-mask-plugin": "npm:jquery-mask-plugin@1.13.4",
+    "jquery-ui": "github:components/jqueryui@1.11.4",
     "jquery-validation": "github:jzaefferer/jquery-validation@1.14.0",
+    "github:components/jqueryui@1.11.4": {
+      "jquery": "github:components/jquery@2.1.4"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },

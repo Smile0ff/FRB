@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>First Realty Brokerage</title>
+	<meta charset="UTF-8">
+	<!--meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"
+	<meta http-equiv="cleartype" content="on">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="Description" content="Описание необходимых мета-тегов." />
+	<!--meta name="msapplication-TileImage" content="assets/images/favicons/ms/144x144.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/57x57.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/60x60.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/72x72.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/76x76.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/76x76.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/114x114.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/120x120.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/144x144.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/152x152.png">
+	<link rel="apple-touch-icon" href="assets/images/favicons/apple/180x180.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/16x16.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/32x32.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/96x96.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/160x160.png">
+	<link rel="icon" type="image/png" href="assets/images/favicons/192x192.png"-->
+	<link rel="stylesheet" href="build/css/catalog.bundle.min.css">
+</head>
+<body>
+	<div id="page">
+		<header id="header" class="common">
+			<div class="logo">
+				<a href="index.html"><img src="build/images/logo.png" alt="First Realty Brokerage"></a>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li class="active"><a href="catalog.html">Каталог</a></li>
+					<li><a href="services.html">Послуги</a></li>
+					<li><a href="people.html">Люди</a></li>
+					<li><a href="vacancies.html">Вакансії</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="research.html">Дослідження</a></li>
+					<li><a href="expats.html">Інформація для экспатів</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+			</nav>
+			<div class="contact-info">	
+				<a href="tel:+380449999999"><span class="icon-phone"></span>+38 (044) 999-99-99</a>
+				<a href="#"><span class="icon-location"></span>знайти нас на мапі</a>
+			</div>
+			<div class="lang">
+				<a href="#">UA</a>
+			</div>
+		</header>
+		<main id="content" class="sticky">
+			<h1>Каталог нерухомості</h1>
+			<div class="outer substrate top-panel-holder">
+				<div class="inner">
+					<div class="btn-large flat white">
+						<a href="#">Комерційна</a>
+					</div>
+					<div class="btn-large flat white">
+						<a href="#">Житлова</a>
+					</div>
+					<form action="#" method="POST" id="search-form">
+						<div class="field-holder">
+							<input type="text" name="search" value="" placeholder="Введіть адресу, ціну або ідентифікатор товару та натисніть введення">
+						</div>
+					</form>
+					<div class="btn-square flat white">
+						<a href="#" class="icon icon-list-view"></a>
+					</div>
+					<div class="btn-square flat white">
+						<a href="#" class="icon icon-grid-view"></a>
+					</div>
+				</div>
+			</div>
+			<div class="outer substrate catalog-content">
+				<div class="inner">
+					<aside class="filter-holder">
+						<form action="#" method="POST" id="filter-form">
+							<div class="item">
+								<h3>Тип недвижимости</h3>
+								<div class="check-holder">
+									<input type="radio" name="filter[property_type]" value="apartment" id="property-type-apartment">
+									<label for="property-type-apartment"><span>квартири</span></label>
+								</div>
+								<div class="check-holder">
+									<input type="radio" name="filter[property_type]" value="house" id="property-type-house">
+									<label for="property-type-house"><span>будинки</span></label>
+								</div>
+							</div>
+							<div class="item">
+								<h3>Тип угоди</h3>
+								<div class="check-holder">
+									<input type="radio" name="filter[deal_type]" value="rent" id="deal-type-rent">
+									<label for="deal-type-rent"><span>квартири</span></label>
+								</div>
+								<div class="check-holder">
+									<input type="radio" name="filter[deal_type]" value="sell" id="deal-type-sell">
+									<label for="deal-type-sell"><span>будинки</span></label>
+								</div>
+							</div>
+							<div class="item">
+								<h3>Тип будинку</h3>
+								<div class="check-holder">
+									<input type="radio" name="filter[house_type]" value="old" id="house-type-old">
+									<label for="house-type-old"><span>старий</span></label>
+								</div>
+								<div class="check-holder">
+									<input type="radio" name="filter[house_type]" value="new" id="house-type-new">
+									<label for="house-type-new"><span>новий</span></label>
+								</div>
+							</div>
+							<div class="item">
+								<h3>Валюта</h3>
+								<div class="check-holder">
+									<input type="radio" name="filter[currency]" value="usd" id="currency-usd">
+									<label for="currency-usd"><span>USD</span></label>
+								</div>
+								<div class="check-holder">
+									<input type="radio" name="filter[currency]" value="uah" id="currency-uah">
+									<label for="currency-uah"><span>UAH</span></label>
+								</div>
+							</div>
+							<div class="item">
+								<h3>Ціна</h3>
+								<div class="range-holder" data-min="0" data-range-min="0" data-max="1000" data-range-max="1000"></div>
+								<div class="field-holder">
+									<span>від</span>
+									<input type="text" name="filter[price_min]" value="0" id="price-min">
+									<span>до</span>
+									<input type="text" name="filter[price_max]" value="1000" id="price-max">
+								</div>
+							</div>
+						</form>
+					</aside>
+					<section class="catalog-holder">
+						<div class="grid">
+							<article class="col item">
+								<div class="inner">
+									<a href="#">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="#">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="#">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="#">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="#">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="#">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+						</div>
+					</section>
+					<aside class="pagination-holder">
+						<ul>
+							<li><a href="#" class="icon icon-arrow-up"></a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#" class="icon icon-arrow-down"></a></li>
+						</ul>
+					</aside>
+				</div>
+			</div>
+		</main>
+	</div>
+	<div id="footer">
+		<div class="cheers-logo">
+			<a href="#"><img src="build/images/cheers.png" alt="CHEERS! Unlimited web-studio"></a>
+		</div>
+		<small>©2015. All rights Reserved. Design and created by CHEERS! Unlimited web-agency.</small>
+	</div>
+	<script src="jspm_packages/system.js"></script>
+	<script src="jspm.config.js"></script>
+	<script>
+		System.import("assets/js/app/catalog");
+	</script>
+</body>
+</html>
