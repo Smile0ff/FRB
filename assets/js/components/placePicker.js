@@ -68,9 +68,8 @@ export default class PlacePicker{
 		})
 		.fail((error) => {
 			error = JSON.parse(error.responseText);
-			console.log({error: error});
+			
 			let placesHtml = placeTpl({error: error});
-			console.log(placesHtml);
 			this.expatsHolder.find(".expats-location-info").html(placesHtml);
 		})
 		.always(() => {
