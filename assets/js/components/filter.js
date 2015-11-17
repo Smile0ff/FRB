@@ -52,32 +52,24 @@ export default class Filter{
 	handleInput(e){
 		if(e.originalEvent.which !== ENTER_KEY) return;
 		let parent = $(e.target).closest(".item");
-		let inputs = parent.find("input[type=text]");
+		let inputs = parent.find(".counter");
+
 		let values = [
 			parseInt(inputs.eq(0).val()),
 			parseInt(inputs.eq(1).val())
 		];
 
-		values = this._checkValues(parent, values);
 		this._updateSlider(parent, values);
 
 		return false;
 	}
-	_checkValues(parent, values){
-		let slider = parent.find(".range-holder");
-
-		values[0] = !isNaN(values[0]) ? values[0] : slider.data("range-min");
-		values[1] = !isNaN(values[1]) ? values[1] : slider.data("range-max");
-
-		return values;
-	}
 	_updateInputs(parent, values){
-		let inputs = parent.find("input[type=text]");
+		let inputs = parent.find(".counter");
 		let slider = parent.find(".range-holder");
 
 		inputs.eq(0).val(values[0]);
 		inputs.eq(1).val(values[1]);
-
+		
 		slider.attr("data-min", values[0]);
 		slider.attr("data-max", values[1]);
 	}

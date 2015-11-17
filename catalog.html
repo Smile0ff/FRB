@@ -87,6 +87,9 @@
 			<div class="outer substrate catalog-content">
 				<div class="inner">
 					<aside class="filter-holder">
+						<!--div class="btn-small flat">
+							<a href="#">Очистити</a>
+						</div-->
 						<form action="#" method="POST" id="filter-form">
 							<div class="item">
 								<h3>Тип недвижимости</h3>
@@ -137,9 +140,86 @@
 								<div class="range-holder" data-min="0" data-range-min="0" data-max="1000" data-range-max="1000"></div>
 								<div class="field-holder">
 									<span>від</span>
-									<input type="text" name="filter[price_min]" value="0" id="price-min">
+									<input type="text" name="filter[price_min]" value="0" id="price-min" class="counter">
 									<span>до</span>
-									<input type="text" name="filter[price_max]" value="1000" id="price-max">
+									<input type="text" name="filter[price_max]" value="1000" id="price-max" class="counter">
+								</div>
+							</div>
+							<div class="item">
+								<h3>Кількість кімнат</h3>
+								<div class="range-holder" data-min="1" data-range-min="1" data-max="5" data-range-max="5"></div>
+								<div class="field-holder text">
+									<span>від</span>
+									<input type="text" name="filter[rooms_min]" value="1" id="rooms-min" class="counter">
+									<span>до</span>
+									<input type="text" name="filter[rooms_max]" value="5" id="rooms-max" class="counter">
+								</div>
+							</div>
+							<div class="item">
+								<h3>Поверх квартири</h3>
+								<div class="range-holder" data-min="1" data-range-min="1" data-max="31" data-range-max="31"></div>
+								<div class="field-holder">
+									<span>від</span>
+									<input type="text" name="filter[floor_min]" value="1" id="floor-min" class="counter">
+									<span>до</span>
+									<input type="text" name="filter[floor_max]" value="31" id="floor-max" class="counter">
+								</div>
+							</div>
+							<div class="item">
+								<h3>Площа</h3>
+								<div class="range-holder" data-min="20" data-range-min="20" data-max="4000" data-range-max="4000"></div>
+								<div class="field-holder">
+									<span>від</span>
+									<input type="text" name="filter[area_min]" value="20" id="area-min" class="counter">
+									<span>до</span>
+									<input type="text" name="filter[area_max]" value="4000" id="area-max" class="counter">
+								</div>
+							</div>
+							<div class="item">
+								<h3>Район</h3>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_1]" value="1" id="district-1">
+									<label for="district-1"><span>Голосіївський</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_2]" value="2" id="district-2">
+									<label for="district-2"><span>Оболоньский</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_3]" value="3" id="district-3">
+									<label for="district-3"><span>Печерский</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_4]" value="4" id="district-4">
+									<label for="district-4"><span>Подольский</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_5]" value="5" id="district-5">
+									<label for="district-5"><span>Святошиньский</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_6]" value="6" id="district-6">
+									<label for="district-6"><span>Солом'янский</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_7]" value="7" id="district-7">
+									<label for="district-7"><span>Шевченківский</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_8]" value="8" id="district-8">
+									<label for="district-8"><span>Дарницкий</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_9]" value="9" id="district-9">
+									<label for="district-9"><span>Дніпрівський</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_10]" value="10" id="district-10">
+									<label for="district-10"><span>Київська область</span></label>
+								</div>
+								<div class="check-holder full-w">
+									<input type="checkbox" name="filter[district_other]" value="11" id="district-other">
+									<label for="district-other"><span>інші</span></label>
 								</div>
 							</div>
 						</form>
@@ -148,7 +228,7 @@
 						<div class="grid">
 							<article class="col item">
 								<div class="inner">
-									<a href="#">
+									<a href="catalog-item.html">
 										<div class="photo-holder">
 											<figure>
 												<img src="build/images/catalog/apartment.jpg" alt="apartment">
@@ -179,7 +259,7 @@
 							</article>
 							<article class="col item">
 								<div class="inner">
-									<a href="#">
+									<a href="catalog-item.html">
 										<div class="photo-holder">
 											<figure>
 												<img src="build/images/catalog/apartment.jpg" alt="apartment">
@@ -210,7 +290,7 @@
 							</article>
 							<article class="col item">
 								<div class="inner">
-									<a href="#">
+									<a href="catalog-item.html">
 										<div class="photo-holder">
 											<figure>
 												<img src="build/images/catalog/apartment.jpg" alt="apartment">
@@ -241,7 +321,7 @@
 							</article>
 							<article class="col item">
 								<div class="inner">
-									<a href="#">
+									<a href="catalog-item.html">
 										<div class="photo-holder">
 											<figure>
 												<img src="build/images/catalog/apartment.jpg" alt="apartment">
@@ -272,7 +352,7 @@
 							</article>
 							<article class="col item">
 								<div class="inner">
-									<a href="#">
+									<a href="catalog-item.html">
 										<div class="photo-holder">
 											<figure>
 												<img src="build/images/catalog/apartment.jpg" alt="apartment">
@@ -303,7 +383,69 @@
 							</article>
 							<article class="col item">
 								<div class="inner">
-									<a href="#">
+									<a href="catalog-item.html">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="catalog-item.html">
+										<div class="photo-holder">
+											<figure>
+												<img src="build/images/catalog/apartment.jpg" alt="apartment">
+											</figure>
+											<span class="deal-type">оренда</span>
+											<div class="price-holder">
+												<p><span>2,500.00$</span>/месяц</p>
+											</div>
+										</div>
+										<p>Код об'єкта: <span>uk-245</span></p>
+										<p class="address">ул. Старокиевская,  д. 15, кв. 7, Шевченковский район, г. Киев, Украина</p>
+										<ul>
+											<li>
+												<p><span class="icon icon-sq"></span>160 m²</p>
+											</li>
+											<li>
+												<p><span class="icon icon-rooms"></span>5 кімнат</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bedroom"></span>3 спальні</p>
+											</li>
+											<li>
+												<p><span class="icon icon-bathroom"></span>2 ванни</p>
+											</li>
+										</ul>
+									</a>
+								</div>
+							</article>
+							<article class="col item">
+								<div class="inner">
+									<a href="catalog-item.html">
 										<div class="photo-holder">
 											<figure>
 												<img src="build/images/catalog/apartment.jpg" alt="apartment">
@@ -340,6 +482,8 @@
 							<li class="active"><a href="#">1</a></li>
 							<li><a href="#">2</a></li>
 							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
 							<li><a href="#" class="icon icon-arrow-down"></a></li>
 						</ul>
 					</aside>
