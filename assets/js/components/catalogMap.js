@@ -2,9 +2,11 @@
 
 import Map from "./map";
 
+const PLACES = window.places || {};
+
 export default class CatalogMap extends Map{
 	constructor(){
-		super($("#map"), window.places.center);
+		super($("#map"), PLACES.center || {lat: 0, lng: 0});
 		this._events();
 	}
 	_events(){
@@ -17,8 +19,8 @@ export default class CatalogMap extends Map{
 	setMarkers(){
 		super.removeMarkers();
 		
-		for(let key in window.places.markers){
-			let marker = window.places.markers[key];
+		for(let key in PLACES.markers){
+			let marker = PLACES.markers[key];
 
 			super.addMarker({
 				position: super.getLatLng(marker.lat, marker.lng),

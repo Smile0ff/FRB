@@ -15,8 +15,8 @@ let mapOptions = {
 
 export default class Map{
 	constructor(el, center){
-		this.el = el;
-		this.center = center;
+		this.el = el || $("#map");
+		this.center = center || {lat: 0, lng: 0};
 		this.map = {};
 		this.markers = [];
 
