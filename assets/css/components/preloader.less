@@ -9,7 +9,7 @@
 	left: 0;
 	z-index: 998;
 	background: @white;
-	transition: all .75s @easing .75s;
+	transition: all .5s @easing .5s;
 	visibility: visible;
 	overflow: hidden;
 	.lane{
@@ -18,21 +18,21 @@
 		height: 4px;
 		position: absolute;
 		top: 50%;
-		left: 0;
+		left: 0%;
 		transform: translateX(-100%) translateY(-50%);
 		&.black{
 			background: @black;
-			animation: loadFill 1.5s @easing .75s infinite backwards;
+			animation: loadFill 1.5s @easing 0s infinite backwards;
 		}
 		&.grey{
 			background: @lightGrey;
 			z-index: 2;
-			animation: loadFill 1.5s @easing 1.5s infinite backwards;
+			animation: loadFill 1.5s @easing .5s infinite backwards;
 		}
 		&.red{
 			background: @red;
 			z-index: 3;
-			animation: loadFill 1.5s @easing 2.25s infinite backwards;
+			animation: loadFill 1.5s @easing 1s infinite backwards;
 		}
 	}
 	&.loaded{
@@ -56,7 +56,7 @@
 	top: 50%;
 	left: 0;
 	opacity: 1;
-	transition: all .75s @easing;
+	transition: all .5s @easing;
 	transform: translateY(100%);
 	overflow: hidden;
 	p{

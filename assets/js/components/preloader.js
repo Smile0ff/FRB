@@ -1,6 +1,6 @@
 "use strict";
 
-const loadTime = 4500;
+const loadTime = 2500;
 
 export default class Preloader{
 	constructor(){
