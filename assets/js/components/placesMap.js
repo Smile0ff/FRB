@@ -11,7 +11,7 @@ export default class PlacesMap extends Map{
 	constructor(){
 		super($("#map"), kiev);
 		this.isLoaded = false;
-		this.locations = [];
+        this.locations = [];
 
 		this._events();
 	}
@@ -30,7 +30,7 @@ export default class PlacesMap extends Map{
 	}
 	setMarkers(){
 		super.removeMarkers();
-		
+
 		for(let key in this.locations){
 			let location = this.locations[key];
 
@@ -45,5 +45,6 @@ export default class PlacesMap extends Map{
 				}
 			});
 		}
+
 	}
 }

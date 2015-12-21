@@ -12,6 +12,12 @@
 		width: 100%;
 		height: auto;
 		overflow: hidden;
+        &.loading{
+            figure{
+                transition: all .25s @easing 0s;
+                opacity: 0;
+            }
+        }
 	}
 	.navigation-holder{
 		width: 100%;
@@ -67,7 +73,7 @@
 			}
 			&:hover,
 			&.active{
-				figure:before{ transform: translateY(100%); }	
+				figure:before{ transform: translateY(100%); }
 			}
 		}
 		.arrow{
@@ -93,6 +99,15 @@
 			}
 		}
 	}
+}
+
+@keyframes photoLoad{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*	gallery end								  */

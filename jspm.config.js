@@ -30,11 +30,11 @@ System.config({
   map: {
     "assets/js/plugin/slider": "slider",
     "assets/js/plugin/tabs": "tabs",
-    "babel": "npm:babel-core@5.8.33",
-    "babel-runtime": "npm:babel-runtime@5.8.29",
+    "babel": "npm:babel-core@5.8.34",
+    "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
     "google-maps-api": "npm:google-maps-api@1.1.0",
-    "handlebars": "github:components/handlebars.js@4.0.4",
+    "handlebars": "github:components/handlebars.js@4.0.5",
     "jquery": "github:components/jquery@2.1.4",
     "jquery-mask-plugin": "npm:jquery-mask-plugin@1.13.4",
     "jquery-ui": "github:components/jqueryui@1.11.4",
@@ -63,7 +63,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.8.29": {
+    "npm:babel-runtime@5.8.34": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:core-js@1.2.6": {

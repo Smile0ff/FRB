@@ -14,7 +14,7 @@ export default class Gallery{
 		this.nav = this.el.find(".navigation");
 		this.holder = this.el.find("ul");
 		this.items = this.holder.find("li");
-		
+
 		this._current = 0;
 		this._width = 0;
 		this._itemWidth = 0;
@@ -57,9 +57,18 @@ export default class Gallery{
 		let src = target.data("img");
 		let img = new Image();
 
+        this.photoView.addClass("loading");
+
 		img.onload = ((image) => {
+
 			this.photoView.find("figure").html(image);
+            
+            window.setTimeout( () => {
+                this.photoView.removeClass("loading");
+            }, 250 );
+
 		})(img);
+
 		img.src = src;
 
 		this._current = target.index();

@@ -1,4 +1,5 @@
 <?php
+
 	sleep(2);
 
 	if(strlen($_POST["comment"]["company_name"]) > 5){
