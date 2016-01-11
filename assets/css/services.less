@@ -43,7 +43,11 @@
 
 .clients-holder{
 	h2{ margin: 0; }
-	li{ margin: 0 20px; }
+	ul{
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	li{ margin: 0 20px 20px; }
 }
 .client-comments-holder{
 	.list-holder.full{
@@ -76,7 +80,7 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #page{
 	&.inside-commercial,
-	&.inside-private,
+	&.inside-residential,
 	&.inside-evaluation,
 	&.inside-management{
 		.tabs{ margin-bottom: 40px; }
@@ -94,8 +98,8 @@
 		background: transparent url("@{images}services-commercial-bg.jpg") no-repeat 50% 0%;
 		background-size: contain;
 	}
-	&.inside-private{
-		background: transparent url("@{images}services-private-bg.jpg") no-repeat 50% 0%;
+	&.inside-residential{
+		background: transparent url("@{images}services-residential-bg.jpg") no-repeat 50% 0%;
 		background-size: contain;
 	}
 	&.inside-evaluation{
@@ -106,7 +110,7 @@
 		background: transparent url("@{images}services-management-bg.jpg") no-repeat 50% 0%;
 		background-size: contain;
 	}
-	&.inside-private,
+	&.inside-residential,
 	&.inside-management{
 		.benefits-holder{
 			& > .list-holder{
