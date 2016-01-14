@@ -62,6 +62,8 @@ export default class PlacePicker{
 		.done((response) => {
 			response = JSON.parse(response);
 
+			console.log(response);
+
 			let placesHtml = placeTpl({categories: response.categories});
 
 			this.placesMap.setLocations(response.locations);
