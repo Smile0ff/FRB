@@ -15,12 +15,10 @@
 	overflow: hidden;
 	.btn-long{
 		width: 300px;
-		height: 60px;
 		float: left;
 		margin: 0 20px 0 0;
 		&:last-child{ margin-right: 0; }
 		a{
-			line-height: 60px;
 			color: @red;
 			text-transform: uppercase;
 		}
@@ -73,6 +71,11 @@
 			}
 		}
 	}
+	.btn-long{
+		margin: 20px auto 40px;
+		float: none;
+		&:last-child{ margin: 20px auto 40px; }
+	}
 }
 #comment-button{ margin: 20px auto 80px; }
 #comment-pop-up{
@@ -91,7 +94,20 @@
 	&.inside-residential,
 	&.inside-evaluation,
 	&.inside-management{
-		.tabs{ margin-bottom: 40px; }
+		.tabs{
+			margin-bottom: 40px;
+			.list-holder{
+				p{
+					width: ~"calc(100% - 60px)";
+					float: left;
+					box-sizing: border-box;
+				}
+				.btn-download{
+					float: right;
+					margin: 0;
+				}
+			}
+		}
 		h3{
 			padding: 40px;
 			font-weight: bold;

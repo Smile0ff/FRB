@@ -4,83 +4,108 @@ import vendorize from "../lib/vendors";
 
 const transform = vendorize("transform");
 
+let gallery = $("#gallery-holder");
+let photoView = gallery.find("#photo-view-holder");
+let navHolder = gallery.find("#navigation-holder");
+let photoHolder = gallery.find("ul");
+let photos = gallery.find("li");
+
+let _width = 0;
+let _itemWidth = 0;
+
+let _photosCount = 0;
+let _visiblePhotos = 4;
+
+let _current = 0;
+
 export default class Gallery{
 	constructor(){
-		this.el = $("#gallery-holder");
-		this.init();
-	}
-	init(){
-		this.photoView = this.el.find(".photo-view");
-		this.nav = this.el.find(".navigation");
-		this.holder = this.el.find("ul");
-		this.items = this.holder.find("li");
+		_photosCount = photos.length;
 
-		this._current = 0;
-		this._width = 0;
-		this._itemWidth = 0;
-		this._height = 0;
-		this._count = this.items.length;
-		this._visibleItems = 4;
-
-		this._UIevents();
-		this.setWidth();
+		this._setWidth();
+		this._events();
 	}
-	_UIevents(){
-		this.el
-			.on("click", ".arrow", $.proxy(this.handleArrow, this))
-			.on("click", "li", $.proxy(this.handleImage, this));
+	_events(){
+		gallery
+			.on("click", ".arrow", (e) => { this.handleArrow(e) })
+			.on("click", "li", (e) => { this.handlePhoto(e) });
 
-		$(window).on("resize", $.proxy(this.handleResize, this));
+		$(window)
+			.on("resize", (e) => { this.handleResize(e) });
 	}
-	setWidth(){
-		this._width = this.nav.outerWidth();
-		this._itemWidth = this._width / this._visibleItems;
+	_setWidth(){
+		_width = navHolder.find(".navigation").outerWidth();
+		_itemWidth = _width / _visiblePhotos;
 
 		this.setCSS();
 	}
 	setCSS(){
-		this.items.css({ width: this._itemWidth });
-		this.holder.css({ width: this._itemWidth * this._count + 2 });
+		gallery.find("li").css({ width: _itemWidth });
+		photoHolder.css({ width: _itemWidth * _photosCount + 2 });
 	}
 	handleArrow(e){
 		let target = $(e.target);
-		target.hasClass("arrow-left") ? this._current-- : this._current++;
 
-		if(this._current < 0) this._current = 0;
-		if(this._current >= this._count - this._visibleItems) this._current = this._count - this._visibleItems;
+		this._recognizeCurrent(target);
+		this._checkRange();
+		this._loadImage();
 
-		this.slide();
+		if(this._isSlideTime()) this.slideNav();
+		this.switchActive();
+
 		return false;
 	}
-	handleImage(e){
+	handlePhoto(e){
 		let target = $(e.target).closest("li");
-		let src = target.data("img");
+
+		_current = target.index();
+
+		this._loadImage();
+		if(this._isSlideTime()) this.slideNav();
+		this.switchActive();
+
+		return false;
+	}
+	_recognizeCurrent(arrow){
+		arrow.hasClass("arrow-left") ? _current-- : _current++;
+	}
+	_checkRange(){
+		if(_current < 0){
+			_current = 0;
+		} else if(_current >= _photosCount - 1){
+			_current = _photosCount - 1;
+		}
+	}
+	_isSlideTime(){
+		return _current <= _photosCount - _visiblePhotos;
+	}
+	_loadImage(){
+		let photo = photos.eq(_current);
+		let src = photo.data("img");
 		let img = new Image();
 
-        this.photoView.addClass("loading");
+        photoView.addClass("loading");
 
 		img.onload = ((image) => {
 
-			this.photoView.find("figure").html(image);
+			photoView.find("figure").html(image);
             
-            window.setTimeout( () => {
-                this.photoView.removeClass("loading");
-            }, 250 );
+            window.setTimeout(() => {
+                photoView.removeClass("loading");
+            }, 250);
 
 		})(img);
 
 		img.src = src;
-
-		this._current = target.index();
-		this.items.removeClass("active").eq(this._current).addClass("active");
-
-		return false;
+	}
+	switchActive(){
+		photos.removeClass("active").eq(_current).addClass("active");
+	}
+	slideNav(){
+		let position = _itemWidth * _current * -1;
+		photoHolder.css({transform: "translateX("+ position +"px)"});
 	}
 	handleResize(e){
 		this.setWidth();
-	}
-	slide(){
-		let position = this._itemWidth * this._current * -1;
-		this.holder.css({transform: "translateX("+ position +"px)"});
 	}
 }
